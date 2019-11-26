@@ -1,0 +1,44 @@
+<div class="container" class="container" style="left: 230px; top: 80px;    width: 726px;
+margin: 0px;">
+        <table>
+        <thead>
+        <tr>
+        <th>Name</th>
+        <!-- <th>Duration</th> -->
+        <th>Status</th>
+        <th>Progress</th>
+        <th>Rating</th>
+        <!-- <th>MId</th>
+        <th>SId</th>
+        <th>UId</th> -->
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let u of list3">
+        <tr>
+        <td>{{u.tName}}</td>
+        <!-- <td>{{u.timeDuration}}</td> -->
+        <td>{{u.status}}</td>
+        <td>{{u.progress}}</td>
+        <td>{{u.rating}}</td>
+        <!-- <td>{{u.mid}}</td>
+        <td>{{u.sid}}</td>
+        <td>{{u.uid}}</td> --> 
+        <td>{{u.startDate}}</td>
+        <td>{{u.endTime}}</td>
+        <td><button (click)="e(u)">Edit</button></td>
+        </tr>
+        </tbody>
+        <tr *ngIf="checkE()==1">
+                <td><input value="{{t.tName}}" style="color: black;font-size:12px;width:50px"disabled [(ngModel)]="t.tName"></td>
+                <td><input name= "status" style="color: black;font-size:12px;"  [(ngModel)]="t.status"></td>
+                <td><input name= "progress" style="color: black;font-size:12px;" [(ngModel)]="t.progress"></td>
+                <td><input type="number" name= "rating" style="color: black;font-size:12px;" [(ngModel)]="t.rating"></td>
+                <td><input type="startDate" name= "fees" style="color: black;font-size:12px;width:50px " disabled [(ngModel)]="t.startDate"></td>
+                <td><input name= "endTime" style="color: black;font-size:12px;width:50px" disabled [(ngModel)]="t.endTime"></td>
+                <td><button style="color: black; font-size:12px;" (click)="save()">Save</button>&nbsp;<button style="color: black; font-size:12px;" (click)="cancel()">Cancel</button></td>
+        </tr>
+        </table>
+        </div>

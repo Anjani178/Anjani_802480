@@ -1,0 +1,126 @@
+
+<div class="container bootstrap snippet" style="background:  rgba(0,0,0,.5);position: relative; top: 100px;">
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+              
+
+      <div class="text-center" >
+        <img src="../../assets/images/user.jpg" class="avatar img-circle img-thumbnail" alt="avatar" style="block-size: 186px;">
+      </div><br>
+
+               
+          <div class="panel panel-default">
+            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body"><a>{{item.linkedinUrl}}</a></div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Social Media</div>
+            <div class="panel-body">
+            	<i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+            </div>
+          </div>
+          
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+
+
+              
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                  <form class="form" action="##" method="post" id="registrationForm">
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4 style="color: white;">User Name</h4></label>
+                              <input class="form-control" type="text" name="mUserName" placeholder="UserName"style="    width: 300px;"[(ngModel)]="item.mUserName" >
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4 style="color: white;">Email</h4></label>
+                            <input class="form-control" type="email" name="mEmail" placeholder="Email" required="" [(ngModel)]= "item.mEmail" style="    width: 300px; ">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="phone"><h4 style="color: white;">Password</h4></label>
+                              <input class="form-control" type="password"  name="mPassword" placeholder="Password"[(ngModel)]="item.mPassword" style="    width: 300px; ">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4 style="color: white;">Mobile</h4></label>
+                             <input class="form-control" type="text" name="contact" style="color: gray;width:300px; " placeholder="Contact" [(ngModel)]="item.contact"> 
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4 style="color: white;">Facilities</h4></label>
+                              <input class="form-control"list="faci" type="text" name="facilities" placeholder="Facilities"style="    width: 300px; "[(ngModel)]="item.facilities" >
+                                    <datalist id="faci">
+                                        <option value="Cloud Labs"></option>
+                                        <option value="Materials"></option>
+                                        <option value="Examples"></option>
+                                    </datalist>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4 style="color: white;"> Technologies</h4></label>
+                              <input class ="form-control" list="hosting-plan" name="technologies" type="text" placeholder="Technologies" [(ngModel)]="item.technologies" style="    width: 300px; "[ngClass]="{ 'is-invali': submitted && f.technologies.errors }">
+                                    <datalist id="hosting-plan">
+                                        <option value="Java"></option>
+                                        <option value="C"></option>
+                                        <option value="C++"></option>
+                                        <option value="Python"></option>
+                                        <option value="R"></option>
+                                        <option value="JavaScript"></option>
+                                        <option value="HTML"></option>
+                                        <option value="CSS"></option>
+                                    </datalist>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="password"><h4 style="color: white;">TimeSlot</h4></label>
+                              <input class="form-control"list="appt" type="text" name="timeSlot" placeholder="Time Slot"style="    width: 300px; "[(ngModel)]="item.timeSlot" >
+                                    <datalist id="appt">
+                                        <option value="09:00 am to 11:00 am"></option>
+                                        <option value="11:00 am to 01:00 pm"></option>
+                                        <option value="02:00 pm to 04:00 pm"></option>
+                                        <option value="04:00 pm to 06:00 pm"></option>
+                                        <option value="07:00 pm to 09:00 pm"></option>
+                                        <option value="10:00 pm to 12:00 am"></option>
+                                    </datalist>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="password2"><h4 style="color: white;">Years Of Experience</h4></label>
+                            <input class="form-control" type="number" name="yearOfExperience"  placeholder="yearOfyearOfExperience" style="    width: 300px;  " [(ngModel)]="item.yearOfExperience" >
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                              	<button class="btn btn-lg btn-success" style="background: #53abec;border-radius: 0px; border: none;"(click)="save()"><i class="glyphicon glyphicon-ok-sign"></i> Save</button> &nbsp;
+                               	<button class="btn btn-lg" style="background: #53abec;border-radius: 0px; border: none;" (click)="reset()"><i class="glyphicon glyphicon-repeat" ></i> Reset</button>
+                            </div>
+                      </div>
+              	</form>
+              
+              <hr>
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+                                                      
